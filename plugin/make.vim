@@ -2,6 +2,7 @@ function! SetupMakeprg()
     let target = expand("<cword>")
     if (strlen(target) != 0)
         sil exec "set makeprg=make\\ ".target
+        bd!
     else
         echo "Please select a target"
     endif
