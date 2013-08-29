@@ -13,7 +13,7 @@ def get_targets(path):
     return ws
 
 def fill_buffer_with_targets():
-    l = "\n".join(get_targets("m1"))
+    l = "\n".join(get_targets("Makefile"))
     vim.command("exec 'badd makefile_buf'")
     vim.command("exec 'sb makefile_buf'")
     vim.command("exec 'setlocal buftype=nofile'")

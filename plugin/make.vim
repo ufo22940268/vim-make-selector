@@ -9,11 +9,11 @@ endfunction
 
 function! OpenMakeFileSelector()
     if (filereadable("Makefile")) 
-        pyfile extract_targets.py
+        pyfile ~/.vim/bundle/vim-make-selector/extract_targets.py
         map <buffer> <cr> :call SetupMakeprg()<CR>
     else
         echoerr "Makefile not exists"
     endif
 endf
 
-noremap <leader>fm call OpenMakeFileSelector()
+noremap <leader>fm :call OpenMakeFileSelector()<cr>
